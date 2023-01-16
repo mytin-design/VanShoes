@@ -1,0 +1,722 @@
+/* optimization date 12/January/2023- 2:57 A.M */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    transition: .5s ease;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/*header styles*/
+
+.hd {
+    padding: 1pc;
+    background-color: black;
+    color: white;
+    height: fit-content;
+}
+
+.hide-big {
+    display: none;
+}
+.nav-bn {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0pc 2pc 0pc 2pc;
+}
+
+.tx-bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1pc;
+}
+
+.vn-main-title {
+    color: white;
+    padding: 1.5pc;
+    background-color: red;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.vn-main-title:hover {
+    color: black;
+}
+
+#vn_src {
+    color: white;
+    background-color: transparent;
+    border-color: #555;
+    padding: .5pc;
+}
+
+.nv-bn-lns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.nv-bn-ln {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5pc;
+    cursor: pointer;
+}
+
+
+.rg-ln {
+    color: red;
+}
+
+.dropdown-menu {
+    background-color: #333 !important;
+    color: fff;
+}
+
+.drop-ln {
+    color: #888 !important;
+}
+
+.mn-nv {
+    margin: 1pc auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mn-nv-ln {
+    color: white;
+}
+
+.mn-nv-ln:hover{
+    color: white;
+
+}
+
+.mn-nv-ln:visited {
+    color: white;
+}
+
+.in-sec {
+    margin-top: 6pc;
+    margin-left: 14pc;
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+    gap: 1pc;
+    padding: 1pc;
+}
+
+.hero-title {
+    font-size: 4rem;
+}
+
+.in-sec-p {
+    color: #eee;
+}
+
+.in-sec-btn {
+    height: 2.5pc;
+    width: 10pc;
+    border: none;
+    background-color: red;
+    color: #fff;
+}
+
+
+/* main */
+
+.ft-prd {
+    text-align: center;
+}
+
+.ft-prd-title {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.tb-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1pc;
+}
+
+.tb-btn {
+    font-weight: 800;
+    cursor: default;
+}
+
+.tcontent {
+    margin: 1pc auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 25pc;
+    grid-auto-flow: row;
+    gap: .5pc;
+}
+
+.tcontent > * {
+    border: .1pc solid #eee;
+}
+
+.sh-bx {
+    display: flex;
+    flex-flow: column;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: box-shadow 1s ease;
+    padding: 1pc;
+}
+
+.sh-onhover {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    gap: 1pc;
+    justify-content: flex-end;
+}
+
+.sh-bx:hover .sh-onhover {
+    visibility: visible;
+}
+
+.sh-bx:hover {
+    box-shadow: 0pc 0pc 0.666pc 0.666pc #eee;
+}
+
+.sh-bx:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.sh-bx-item-wrap {
+    margin-top: 3pc;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1pc;
+}
+
+.sh-bx-img{
+    height: 5pc;
+    width: 6pc;
+}
+
+.h-line {
+    width: 50%;
+}
+
+.sh-price {
+    color: red;
+}
+
+.sh-bx-3 {
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1pc;
+    padding: 1pc;
+}
+
+.sh-bx-3:hover {
+    box-shadow: 0pc 0pc 0.666pc 0.666pc #eee;
+}
+
+.sh-bx-3-info {
+    display: flex;
+    flex-flow: column;
+    text-align: start;
+    padding: 1pc;
+    width: 15pc;
+}
+
+.sh-bx-3-title {
+    font-size: 2rem;
+}
+
+
+.sh-bx-btn {
+    height: 2.5pc;
+    width: 8pc;
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+
+/* carousel for container spanning 3 columns */
+
+
+.crsl-wrap {
+    position: relative;
+    margin: 0 auto;
+    max-width: 100pc;
+}
+
+
+.crsl-bx {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1pc;
+    text-align: center;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    display: none;
+}
+
+.scrsl-bx {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1pc;
+    text-align: center;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    display: none;
+}
+
+.rcrsl-bx {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1pc;
+    text-align: center;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    display: none;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+.crsl-img {
+    height: 8pc;
+    width: 12pc;
+}
+
+.crsl-item-name {
+    font-weight: 800;
+}
+
+.crsl-item-price {
+    color: red;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 1pc;
+    color: black;
+    background: #eee;
+    cursor: pointer;
+    margin-top: -22px;
+    font-weight: bold;
+    font-size: 1.3pc;
+    transition: .6s ease;
+    user-select: none;
+}
+
+.next{
+    right: -3pc;
+    background-color: red;
+}
+
+.prev {
+    left: -3pc;
+}
+
+
+
+.sh-bx-2 {
+grid-column: span 2;
+display: flex;
+align-items: center;
+justify-content: space-around;
+padding: 1pc;
+}
+
+
+.sh-2-img {
+        height: 15pc;
+        width: 12pc;
+}
+
+.sh-bx-2:hover {
+    box-shadow: 0pc 0pc 0.666pc 0.666pc #eee;
+}
+
+.vn-foo {
+    background-color: #000;
+    color: #fff;
+}
+.vn-foo-in {
+    padding: 4pc 4pc 2pc 4pc;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+.foo-lnks {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.foo-title {
+    text-align: center;
+}
+
+.foo-ln {
+    color: #777;
+}
+
+.foo-ln:hover {
+    color: #fff;
+}
+
+.fol-lnks {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.foo-msg-form {
+    background-color: transparent;
+}
+
+#msgBx {
+    background-color: transparent;
+    color: #777;
+    border-color: #555;
+    padding: .5pc;
+}
+
+#sendMsgBx {
+    color: #000;
+    font-size: 1.5rem;
+    background-color: red;
+    padding: .5pc;
+    border: none;
+}
+.cp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1pc;
+}
+
+
+
+/*styles for devices less than 996px */
+
+@media only screen  and (max-width: 996px) {
+    .hd {
+     
+        height: fit-content;
+    }
+
+    .hide-big {
+        display: none;
+    }
+    .nav-bn {
+        margin: 0 auto;
+        width:95%;
+        padding: 0pc 2pc 0pc 2pc;
+    }
+
+    .in-sec {
+        margin-top: 6pc;
+        margin-left: 8pc;
+        width: 50%;
+        
+    }
+    /* is there  way to push grid containers over to the next line - like flex wrap?*/
+    .tcontent {
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+}
+
+
+@media only screen and (max-width: 935px) {
+    .foo-title {
+        font-size: small;
+    }
+
+    .foo-ln {
+        font-size: small;
+    }
+
+    .f-msg-title {
+        font-size: small;
+    }
+    .foo-lnks {
+        font-size: small;
+    } 
+}
+@media only screen and (max-width: 920px) {
+    .tcontent {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .hd {
+        height: fit-content;
+    }
+    
+    
+    .nav-bn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    .vn-main-title {
+        padding: .5pc;
+    }
+
+    #vn_src {
+        padding-left: 1pc;
+        font-size: .8rem;
+    }
+
+
+    .hide-small {
+        display: none;
+    }
+
+    .hide-big {
+        display: block;
+    }
+
+    /* sidepanel */
+
+    .show-small {
+        display: block;
+    }
+    #sidePanel {
+        display: flex;
+        flex-flow: column;
+        gap: 1pc;
+        align-items: start;
+        position: fixed;
+        width: 0; /* the width is 0 when panel is closed */
+        height: 100vh;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.925);
+        overflow: scroll;
+        padding-top: 3pc;
+        transition: .5s;
+    }
+
+    .sidepanel > .nv-bn-ln, .mn-nv-ln {
+        padding-left: 3pc;
+        width: 100%;
+        font-size: 1pc;
+        text-decoration: none;
+        display: block;
+        transition: .5s;
+    }
+
+
+    
+
+    
+#sidePanel .txt-low {
+    color: #999;
+}
+
+#sidePanel .txt-low:hover {
+    color: #fff;
+}
+
+
+    /*position and style the close button*/
+
+    .sidepanel .closebtn {
+        position: absolute;
+        top: 0;
+        right: 1pc;
+        font-size: 3pc;
+        color: white;
+        cursor: pointer;
+
+    }
+
+
+    /* style the btn that opens the side panel */
+
+    .openNav {
+        font-size: 1.5pc;
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+        padding: 10px 5px;
+        border: none;
+    }
+
+    .openNav:hover {
+        color: #888;
+    }
+
+    .in-sec {
+        margin-left: 1pc;
+        width: 100%;
+    }
+
+
+}
+
+@media only screen and (max-width: 730px) {
+    .foo-title {
+        font-size: smaller;
+    }
+
+    .foo-ln {
+        font-size: smaller;
+    }
+
+    .f-msg-title {
+        font-size: smaller;
+    }
+    .foo-lnks {
+        font-size: smaller;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .tcontent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sh-bx-3 {
+        grid-column: span 2;
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        font-size: xx-small;
+    }
+
+    .sh-bx-3-title {
+        font-size: xx-small;
+    }
+
+    .sh-bx-2 {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        font-size: xx-small;
+        
+    }
+
+    .sh-2-img {
+        height: 10pc;
+    }
+
+    .vn-foo-in {
+        width: 100%;
+        padding: .5pc;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .vn-foo-in {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 1pc;
+    }
+
+    .foo-title {
+        font-size: small;
+    }
+
+    .foo-ln {
+        font-size: small;
+    }
+
+    .f-msg-title {
+        font-size: small;
+    }
+    .foo-lnks {
+        font-size: small;
+    }
+}
+
+/* for devices less than 500px */
+@media only screen and (max-width: 500px) {
+    
+    .vn-foo-in {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 1pc;
+    }
+
+}
+
+
+@media only screen and (max-width: 375px) {
+    .tcontent {
+        grid-template-columns: 1fr;
+    }
+
+    .sh-bx-3 {
+        grid-column: span 1;
+    }
+
+    .sh-bx-2 {
+        grid-column: span 1;
+    }
+
+}

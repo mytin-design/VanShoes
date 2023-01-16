@@ -1,0 +1,1303 @@
+<!--Shoe store-->
+<!doctype html>
+<html lang="en-KE">
+    <head>
+        <title>VANS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="vans, shoes, nike">
+        <meta name="description" content="A shoe retailer website">
+        <meta http-equiv="X-UA-Compatible" content="IE-7">
+        <meta property="og:title" content="VANS">
+        <meta property="og:image" content="">
+        <meta property="og:keywords" content="Vans, shoes, nike">
+        <meta property="og:image-width" content="350">
+        <meta property="og:image-height" content="350">
+        <link rel="icon" href="">
+        <link rel="stylesheet" href="stylesv2.css">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/45fbaa9681.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    </head>
+    <body id="bodyMain">
+        <header class="hd">
+            <nav class="nav-bn">
+                <!--Position absolutely-->
+            <!--Sidepanel for devices less than 500px  -- for this consider @media 800px-->
+
+            <div class="sidepanel hide-big show-small" id="sidePanel">
+                <p onclick="closeNav()" id="close" class="closebtn">&times;</p>
+                <span class="nv-bn-ln txt-low upper dropdown">
+                    
+                    <a href="#" data-toggle="dropdown" class="nv-bn-ln text-white btn data-toggle">
+                        Shops
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="drop-ln">Item 1</a></li>
+                            <li><a href="#" class="drop-ln">Item 1</a></li>
+                            <li><a href="#" class="drop-ln">Item 1</a></li>
+                            <li><a href="#" class="drop-ln">Item 1</a></li>
+                            <li><a href="#" class="drop-ln">Item 1</a></li>
+                            <li><a href="#" class="drop-ln">Item 1</a></li>
+                            <li><a href="#" class="drop-ln">Item 1</a></li>
+                            <li><a href="#" class="drop-ln">Item 1</a></li>
+
+                        </ul>
+                    </a>
+                </span>
+
+                <span  class="nv-bn-ln txt-low upper dropdown">
+                    <a href="#" class="btn text-white data-toggle" data-toggle="dropdown">
+                        Sales
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="drop-ln">ITEM 1</a></li>
+                            <li><a href="#" class="drop-ln">ITEM 1</a></li>
+                            <li><a href="#" class="drop-ln">ITEM 1</a></li>
+                            <li><a href="#" class="drop-ln">ITEM 1</a></li>
+                            <li><a href="#" class="drop-ln">ITEM 1</a></li>
+                            <li><a href="#" class="drop-ln">ITEM 1</a></li>
+                            <li><a href="#" class="drop-ln">ITEM 1</a></li>
+
+                        </ul>
+                    </a>
+                </span>
+
+                <span class="hlp-ln txt-low nv-bn-ln upper">
+                    Help 
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg id="help-icon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <image width="96" height="96" xlink:href="data:image/png;base64,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" id="img_1" />
+                      </defs>
+                      <use xlink:href="#img_1" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                    </svg>
+                </span>
+
+                <span class="sn-ln txt-low nv-bn-ln upper">
+                    Sign In
+
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg id="user-icon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABHNCSVQICAgIfAhkiAAAA/hJREFUeJzt3E+oVGUYx/Hvk/RHRU3Qsj+EZmWoRW3CkLtpYYukgoqgqIWLgiCCNrWOlkWUYLuC2tz+QknhpmhREIWUQigUahj90RK8mXiF+LY494JKF+6cmTnvO3eeD8zyPb/3PM+8d865552BlFJKKaWUUkoppTQuovQEeqHeDzwIbAJWzbwE/px5/QC8HxEfFZvkQqOuVF9RTzl/U+pL6vLS8x9p6jPqiR4Kf6G/1KdKn8fIUZern/VR+AvtMVfD/Kjr1Z8GWPxZP6rrSp9f1Wz+3h8eQvFnHVJXlj7Pc11UegKz1IuBT4C1Q4xZB+yeyapCNQ0AngPu7CBnK/BsBznzUsV9gLoaOAIs6ShyClgXESc6yptTLSvgRborPsBy4IUO8+ZUfAWoS2jekYs6jp4GVkTEdMe556lhBdxN98UHuBTYViD3PDU0YHvB7HsKZgN1NOC2Mc0G6mjAFWOaDdTxIXwWKHVjdCoilhXKBupYAWcLZhd/A9bQgGMFs38vmA3U0YA/CmZnA4DvC2Z/VzAbqKMBewpmf1owG6jgQ0hdCpyk+7vhs8CyiCh5EVB+BUTEP8BbBaLfKF18qGAFAKjXAofo7n7gDLA2IkpeAAAVrACAiPgF2Nlh5Gs1FL8q6lJ13xCfB8/aqy4ufb5VUteoR4dY/CPqqtLnWTX1xplCDaP4N5Q+v5Fgsz3lqwEW/wsr245SPXWR+qR6vI/CH1OfUKu42BhJ6uXqq/a+OfdlR2A7YhX3AfOl3gs8Amzg/7enHwQmI+LjYpNMKaWUUkoppZRSSmkOVf8zTr0e2EizjfxWYD2wBrh6jiG/zrwOAftpNl4diIjDw59tO1U0QF0BbKEp8saZ1y3AoJ7dngb2AQdoftBjP/B1RJwa0PFbK9YAdQK4D7gLuL3QNL4BPgc+jIhvS0yg0waoW4CHgEeBK7vMnoejwNvAuxGxr6vQoTfA5jvATwOPMdxvwQ/SQZrdersi4mTpybSi3qS+2cfz3BqcVneq15Su57ypG9RJ9d+ipRusaXWXzRbKOqmLbR6eL6TCX+iM+rwD3GUxkM8A9Q7gPeC6QRxvBOwFHoiIn/s9UN8NULfTFP+yfo81Yo4D2yKir2/49LWU1MeB3Yxf8QFWA1+qW/s5SOsVYPMTkh9QyRb3gv4GJtreO7RqgLqZ5u/gJW3GL0C/ATdHxFSvA9u+e98hi3+uq4DX2wzseQWoDwOTbcIWOGl+haunK6M2K2BHizHjIGhRmzYN2NxizLiY6HVAmwbkV3zmtqnXAW0+A+x1zDiJiJ5qOu7X8MVlAwrLBhSWDSgsG1BYNqCwbEBh2YDCsgEppZRSSimllFJKKXXkP9Yd32+5YF6JAAAAAElFTkSuQmCC" id="img_2" />
+                      </defs>
+                      <use xlink:href="#img_2" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                    </svg>
+                </span>
+
+                <span class="rg-ln txt-low nv-bn-ln upper">
+                    Register
+
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg id="user-icon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABHNCSVQICAgIfAhkiAAAA/hJREFUeJzt3E+oVGUYx/Hvk/RHRU3Qsj+EZmWoRW3CkLtpYYukgoqgqIWLgiCCNrWOlkWUYLuC2tz+QknhpmhREIWUQigUahj90RK8mXiF+LY494JKF+6cmTnvO3eeD8zyPb/3PM+8d865552BlFJKKaWUUkoppTQuovQEeqHeDzwIbAJWzbwE/px5/QC8HxEfFZvkQqOuVF9RTzl/U+pL6vLS8x9p6jPqiR4Kf6G/1KdKn8fIUZern/VR+AvtMVfD/Kjr1Z8GWPxZP6rrSp9f1Wz+3h8eQvFnHVJXlj7Pc11UegKz1IuBT4C1Q4xZB+yeyapCNQ0AngPu7CBnK/BsBznzUsV9gLoaOAIs6ShyClgXESc6yptTLSvgRborPsBy4IUO8+ZUfAWoS2jekYs6jp4GVkTEdMe556lhBdxN98UHuBTYViD3PDU0YHvB7HsKZgN1NOC2Mc0G6mjAFWOaDdTxIXwWKHVjdCoilhXKBupYAWcLZhd/A9bQgGMFs38vmA3U0YA/CmZnA4DvC2Z/VzAbqKMBewpmf1owG6jgQ0hdCpyk+7vhs8CyiCh5EVB+BUTEP8BbBaLfKF18qGAFAKjXAofo7n7gDLA2IkpeAAAVrACAiPgF2Nlh5Gs1FL8q6lJ13xCfB8/aqy4ufb5VUteoR4dY/CPqqtLnWTX1xplCDaP4N5Q+v5Fgsz3lqwEW/wsr245SPXWR+qR6vI/CH1OfUKu42BhJ6uXqq/a+OfdlR2A7YhX3AfOl3gs8Amzg/7enHwQmI+LjYpNMKaWUUkoppZRSSmkOVf8zTr0e2EizjfxWYD2wBrh6jiG/zrwOAftpNl4diIjDw59tO1U0QF0BbKEp8saZ1y3AoJ7dngb2AQdoftBjP/B1RJwa0PFbK9YAdQK4D7gLuL3QNL4BPgc+jIhvS0yg0waoW4CHgEeBK7vMnoejwNvAuxGxr6vQoTfA5jvATwOPMdxvwQ/SQZrdersi4mTpybSi3qS+2cfz3BqcVneq15Su57ypG9RJ9d+ipRusaXWXzRbKOqmLbR6eL6TCX+iM+rwD3GUxkM8A9Q7gPeC6QRxvBOwFHoiIn/s9UN8NULfTFP+yfo81Yo4D2yKir2/49LWU1MeB3Yxf8QFWA1+qW/s5SOsVYPMTkh9QyRb3gv4GJtreO7RqgLqZ5u/gJW3GL0C/ATdHxFSvA9u+e98hi3+uq4DX2wzseQWoDwOTbcIWOGl+haunK6M2K2BHizHjIGhRmzYN2NxizLiY6HVAmwbkV3zmtqnXAW0+A+x1zDiJiJ5qOu7X8MVlAwrLBhSWDSgsG1BYNqCwbEBh2YDCsgEppZRSSimllFJKKXXkP9Yd32+5YF6JAAAAAElFTkSuQmCC" id="img_3" />
+                      </defs>
+                      <use xlink:href="#img_3" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                    </svg>
+                </span>
+                
+                
+                <span title="Add to Cart" class="nv-bn-ln txt-low crt-ln upper">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg id="cart-icon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABHNCSVQICAgIfAhkiAAABOlJREFUeJztnUF24kYQhv+yJbwQvMiLgHchJwhzgjAnMDlBuMEwN+AGmTlB8AkGnyD2CYa5Ad4BWSA/pEWMhsoC+715tmyQukoIqb+l7fqrTL3uVlV3C8BisVgsFovFYrFUDXr+g7nncVoRBqYXUfSrTEjV4kRChID2vNHoSWhVDZEEAACY+2JaFUIyAZdL32+L6VUEuQQAWMfxQFKvCogmgIE/JfWqgGgCwOwvGo2+qGbJkU0AAN5sPkhrlpkXdcAuZp43IOAvjWCOmBG57udmEEzSGqZOwNL3/Yf1epnWrvQQBTXHeXceBNM0ZqmnoPMgCABcpbUrPcz+w3o9TGuWaQ0g1/2Uxa70EF2mNcmUgMe57lsW21LD7Kc1yfwURCcndhS8JPXUnHoR/pF5vR6A+ScTjTJBrvsu7ZOQUR1AwMjEvmRcZXkMNUqA6zh2GgIAovua6w6zmBol4DwIpiC6NtEoCZ/SPv8/Yd6KIBoZaxwzRPc1g5nAOAGt1WrMwJ2pzrFCRIPH4jQTUs24Sq4FDNw1V6uRiYZIAs5c1yiIY+WUqG+qIZKAKvaHmOj25zC8MdUR2w+oWn/oxHFEtl/FElCx/lCmoisJ0R2xSvSHDIquJEQT0FytRiC6l9QsIJmLriTE94RL3R8yLLqSEE9AmftDpkVXoqak2BPzen0M5tS7Q0WGgbuLKGpL64qPAACl7A9JFF1JqIwAAJh53pSAX7T084SJbi/CsKuhrTMCtpRmLZAquhK1tYRL1B8SK7qSUEtAKfpDwkVXEppTUBn6Q6JFVxJqi/ATc8+bAPhN248426KrLf3c/xzVEQAcb39Io+hK9KPtADi+80NaRVcS6iMAAMA8zsWPEFpFVxLqCVj6vp/l0OoBuZLY6doX9QQ8xPHfWQ6tHohvNdfN9aKh6hrwb73e3TD/o+lDkKtWFPXzdqqWgKXv+/+t118JaGv5MIWJbol5WnPdofbz/ms4WsIPcTzY9eEzcHfmup08HveKisoIWPh+h9frr7v+7oTofZ4LXhFRWYQ3cbz7FiXRddU/fEAhAYtGo0/M3Tf/aFvm96V9HyMHuajNzMMqz/s/IroG7DP3a+4uHSOyL+v4/r2906Hi7tIxIv2yjs5bvyaiTNf5y4zoFDRvNHrYbL5IahaNVhSJfmayZ0NPT6eSelVA9mxoEEyqfF0pCxqF2FHugB0KlVbErF6/IebfNbQPTaHXgCfOtlVuVS5rGKGSgPMgmNZct8tEtxr6ZUJ9U/5xU6bPRO0yTEvSU5DFYrFYqov6grLw/Q7H8SUDXQI6AMDAhIAbcpzrQzfnDh2fagIWnveB36qMiQJiHjaj6LNmHK9RhPjUEjCv17+Aeb8vdSAat8LwD61YkihKfCqF2MzzBnv/cwDA3Jt5Xm4bNUWKT3wE7Hsk5WUkFJDjvNeec4sWn/ymfBxn+y4ZZj+zbRo3BYtPPgFA9xC2efjQiE/jXRGZryOZ2ObhQyM+jUXYZF3Jo9FVqPg0pqDMi5SJbR4+NOLTmIJuDmGbhw+N+OQT4DjjTC9t2p4XHUnH88JNweITT0AzCCbMPExr93hedCodz3OKFp9mK2L/dwYRXbfCMNfvoixKfGqX9Fph2GPg45vDneiegY95f/hAceLLqx3de6XdOy5IO7qw8VksFovFYrFYLJby8T+zWvz6IEl/pgAAAABJRU5ErkJggg==" id="img_4" />
+                      </defs>
+                      <g>
+                        <use xlink:href="#img_4" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                      </g>
+                    </svg>
+                </span>
+
+                <!--Links for main nav-->
+
+                <a href="#" class="men-ctg mn-nv-ln txt-low upper">Men</a>
+            <a href="#" class="wmn-ctg mn-nv-ln txt-low upper">Women</a>
+            <a href="#" class="grls-ctg mn-nv-ln txt-low upper">Girls</a>
+            <a href="#" class="ncltn-ctg mn-nv-ln txt-low upper">New Collection</a>
+            <a href="#" class="skt-ctg mn-nv-ln txt-low upper">Skate</a>
+            <a href="#" class="ltst-ctg mn-nv-ln txt-low upper">Latest</a>
+            <a href="#" class="sg-ctg mn-nv-ln txt-low upper">Suggested</a>
+        
+
+            </div>
+            <button class="openNav hide-big" onclick="openNav()">&#9776;</button>
+
+                <div class="tx-bx">
+                    <a href="./index.html" class="vn-main-title">VANS</a>
+                    <form action="#" method="GET" class="vn-src-form">
+                        <input type="search" id="vn_src" class="upper" name="searchContent" placeholder="Search...">
+                    </form>
+                </div>
+                <div class="nv-bn-lns hide-small show-big">
+                    <span class="nv-bn-ln upper dropdown">
+                        
+                        <a href="#" data-toggle="dropdown" class="nv-bn-ln text-white btn data-toggle">
+                            Shops
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="drop-ln">Item 1</a></li>
+                                <li><a href="#" class="drop-ln">Item 1</a></li>
+                                <li><a href="#" class="drop-ln">Item 1</a></li>
+                                <li><a href="#" class="drop-ln">Item 1</a></li>
+                                <li><a href="#" class="drop-ln">Item 1</a></li>
+                                <li><a href="#" class="drop-ln">Item 1</a></li>
+                                <li><a href="#" class="drop-ln">Item 1</a></li>
+                                <li><a href="#" class="drop-ln">Item 1</a></li>
+
+                            </ul>
+                        </a>
+                    </span>
+
+                    <span  class="nv-bn-ln upper dropdown">
+                        <a href="#" class="btn text-white data-toggle" data-toggle="dropdown">
+                            Sales
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="drop-ln">ITEM 1</a></li>
+                                <li><a href="#" class="drop-ln">ITEM 1</a></li>
+                                <li><a href="#" class="drop-ln">ITEM 1</a></li>
+                                <li><a href="#" class="drop-ln">ITEM 1</a></li>
+                                <li><a href="#" class="drop-ln">ITEM 1</a></li>
+                                <li><a href="#" class="drop-ln">ITEM 1</a></li>
+                                <li><a href="#" class="drop-ln">ITEM 1</a></li>
+
+                            </ul>
+                        </a>
+                    </span>
+
+                    <span class="hlp-ln nv-bn-ln upper">
+                        Help 
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg id="help-icon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                          <defs>
+                            <image width="96" height="96" xlink:href="data:image/png;base64,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" id="img_5" />
+                          </defs>
+                          <use xlink:href="#img_5" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                        </svg>
+                    </span>
+
+                    <span class="sn-ln nv-bn-ln upper">
+                        Sign In
+
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg id="user-icon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                          <defs>
+                            <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABHNCSVQICAgIfAhkiAAAA/hJREFUeJzt3E+oVGUYx/Hvk/RHRU3Qsj+EZmWoRW3CkLtpYYukgoqgqIWLgiCCNrWOlkWUYLuC2tz+QknhpmhREIWUQigUahj90RK8mXiF+LY494JKF+6cmTnvO3eeD8zyPb/3PM+8d865552BlFJKKaWUUkoppTQuovQEeqHeDzwIbAJWzbwE/px5/QC8HxEfFZvkQqOuVF9RTzl/U+pL6vLS8x9p6jPqiR4Kf6G/1KdKn8fIUZern/VR+AvtMVfD/Kjr1Z8GWPxZP6rrSp9f1Wz+3h8eQvFnHVJXlj7Pc11UegKz1IuBT4C1Q4xZB+yeyapCNQ0AngPu7CBnK/BsBznzUsV9gLoaOAIs6ShyClgXESc6yptTLSvgRborPsBy4IUO8+ZUfAWoS2jekYs6jp4GVkTEdMe556lhBdxN98UHuBTYViD3PDU0YHvB7HsKZgN1NOC2Mc0G6mjAFWOaDdTxIXwWKHVjdCoilhXKBupYAWcLZhd/A9bQgGMFs38vmA3U0YA/CmZnA4DvC2Z/VzAbqKMBewpmf1owG6jgQ0hdCpyk+7vhs8CyiCh5EVB+BUTEP8BbBaLfKF18qGAFAKjXAofo7n7gDLA2IkpeAAAVrACAiPgF2Nlh5Gs1FL8q6lJ13xCfB8/aqy4ufb5VUteoR4dY/CPqqtLnWTX1xplCDaP4N5Q+v5Fgsz3lqwEW/wsr245SPXWR+qR6vI/CH1OfUKu42BhJ6uXqq/a+OfdlR2A7YhX3AfOl3gs8Amzg/7enHwQmI+LjYpNMKaWUUkoppZRSSmkOVf8zTr0e2EizjfxWYD2wBrh6jiG/zrwOAftpNl4diIjDw59tO1U0QF0BbKEp8saZ1y3AoJ7dngb2AQdoftBjP/B1RJwa0PFbK9YAdQK4D7gLuL3QNL4BPgc+jIhvS0yg0waoW4CHgEeBK7vMnoejwNvAuxGxr6vQoTfA5jvATwOPMdxvwQ/SQZrdersi4mTpybSi3qS+2cfz3BqcVneq15Su57ypG9RJ9d+ipRusaXWXzRbKOqmLbR6eL6TCX+iM+rwD3GUxkM8A9Q7gPeC6QRxvBOwFHoiIn/s9UN8NULfTFP+yfo81Yo4D2yKir2/49LWU1MeB3Yxf8QFWA1+qW/s5SOsVYPMTkh9QyRb3gv4GJtreO7RqgLqZ5u/gJW3GL0C/ATdHxFSvA9u+e98hi3+uq4DX2wzseQWoDwOTbcIWOGl+haunK6M2K2BHizHjIGhRmzYN2NxizLiY6HVAmwbkV3zmtqnXAW0+A+x1zDiJiJ5qOu7X8MVlAwrLBhSWDSgsG1BYNqCwbEBh2YDCsgEppZRSSimllFJKKXXkP9Yd32+5YF6JAAAAAElFTkSuQmCC" id="img_6" />
+                          </defs>
+                          <use xlink:href="#img_6" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                        </svg>
+                    </span>
+
+                    <span class="rg-ln nv-bn-ln upper">
+                        Register
+
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg id="user-icon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                          <defs>
+                            <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABHNCSVQICAgIfAhkiAAAA/hJREFUeJzt3E+oVGUYx/Hvk/RHRU3Qsj+EZmWoRW3CkLtpYYukgoqgqIWLgiCCNrWOlkWUYLuC2tz+QknhpmhREIWUQigUahj90RK8mXiF+LY494JKF+6cmTnvO3eeD8zyPb/3PM+8d865552BlFJKKaWUUkoppTQuovQEeqHeDzwIbAJWzbwE/px5/QC8HxEfFZvkQqOuVF9RTzl/U+pL6vLS8x9p6jPqiR4Kf6G/1KdKn8fIUZern/VR+AvtMVfD/Kjr1Z8GWPxZP6rrSp9f1Wz+3h8eQvFnHVJXlj7Pc11UegKz1IuBT4C1Q4xZB+yeyapCNQ0AngPu7CBnK/BsBznzUsV9gLoaOAIs6ShyClgXESc6yptTLSvgRborPsBy4IUO8+ZUfAWoS2jekYs6jp4GVkTEdMe556lhBdxN98UHuBTYViD3PDU0YHvB7HsKZgN1NOC2Mc0G6mjAFWOaDdTxIXwWKHVjdCoilhXKBupYAWcLZhd/A9bQgGMFs38vmA3U0YA/CmZnA4DvC2Z/VzAbqKMBewpmf1owG6jgQ0hdCpyk+7vhs8CyiCh5EVB+BUTEP8BbBaLfKF18qGAFAKjXAofo7n7gDLA2IkpeAAAVrACAiPgF2Nlh5Gs1FL8q6lJ13xCfB8/aqy4ufb5VUteoR4dY/CPqqtLnWTX1xplCDaP4N5Q+v5Fgsz3lqwEW/wsr245SPXWR+qR6vI/CH1OfUKu42BhJ6uXqq/a+OfdlR2A7YhX3AfOl3gs8Amzg/7enHwQmI+LjYpNMKaWUUkoppZRSSmkOVf8zTr0e2EizjfxWYD2wBrh6jiG/zrwOAftpNl4diIjDw59tO1U0QF0BbKEp8saZ1y3AoJ7dngb2AQdoftBjP/B1RJwa0PFbK9YAdQK4D7gLuL3QNL4BPgc+jIhvS0yg0waoW4CHgEeBK7vMnoejwNvAuxGxr6vQoTfA5jvATwOPMdxvwQ/SQZrdersi4mTpybSi3qS+2cfz3BqcVneq15Su57ypG9RJ9d+ipRusaXWXzRbKOqmLbR6eL6TCX+iM+rwD3GUxkM8A9Q7gPeC6QRxvBOwFHoiIn/s9UN8NULfTFP+yfo81Yo4D2yKir2/49LWU1MeB3Yxf8QFWA1+qW/s5SOsVYPMTkh9QyRb3gv4GJtreO7RqgLqZ5u/gJW3GL0C/ATdHxFSvA9u+e98hi3+uq4DX2wzseQWoDwOTbcIWOGl+haunK6M2K2BHizHjIGhRmzYN2NxizLiY6HVAmwbkV3zmtqnXAW0+A+x1zDiJiJ5qOu7X8MVlAwrLBhSWDSgsG1BYNqCwbEBh2YDCsgEppZRSSimllFJKKXXkP9Yd32+5YF6JAAAAAElFTkSuQmCC" id="img_7" />
+                          </defs>
+                          <use xlink:href="#img_7" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                        </svg>
+                    </span>
+                    
+
+                    <span class="v-line">|</span>
+                    
+                    <span title="Add to Cart" class="nv-bn-ln crt-ln upper">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg id="cart-icon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                          <defs>
+                            <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABHNCSVQICAgIfAhkiAAABOlJREFUeJztnUF24kYQhv+yJbwQvMiLgHchJwhzgjAnMDlBuMEwN+AGmTlB8AkGnyD2CYa5Ad4BWSA/pEWMhsoC+715tmyQukoIqb+l7fqrTL3uVlV3C8BisVgsFovFYrFUDXr+g7nncVoRBqYXUfSrTEjV4kRChID2vNHoSWhVDZEEAACY+2JaFUIyAZdL32+L6VUEuQQAWMfxQFKvCogmgIE/JfWqgGgCwOwvGo2+qGbJkU0AAN5sPkhrlpkXdcAuZp43IOAvjWCOmBG57udmEEzSGqZOwNL3/Yf1epnWrvQQBTXHeXceBNM0ZqmnoPMgCABcpbUrPcz+w3o9TGuWaQ0g1/2Uxa70EF2mNcmUgMe57lsW21LD7Kc1yfwURCcndhS8JPXUnHoR/pF5vR6A+ScTjTJBrvsu7ZOQUR1AwMjEvmRcZXkMNUqA6zh2GgIAovua6w6zmBol4DwIpiC6NtEoCZ/SPv8/Yd6KIBoZaxwzRPc1g5nAOAGt1WrMwJ2pzrFCRIPH4jQTUs24Sq4FDNw1V6uRiYZIAs5c1yiIY+WUqG+qIZKAKvaHmOj25zC8MdUR2w+oWn/oxHFEtl/FElCx/lCmoisJ0R2xSvSHDIquJEQT0FytRiC6l9QsIJmLriTE94RL3R8yLLqSEE9AmftDpkVXoqak2BPzen0M5tS7Q0WGgbuLKGpL64qPAACl7A9JFF1JqIwAAJh53pSAX7T084SJbi/CsKuhrTMCtpRmLZAquhK1tYRL1B8SK7qSUEtAKfpDwkVXEppTUBn6Q6JFVxJqi/ATc8+bAPhN248426KrLf3c/xzVEQAcb39Io+hK9KPtADi+80NaRVcS6iMAAMA8zsWPEFpFVxLqCVj6vp/l0OoBuZLY6doX9QQ8xPHfWQ6tHohvNdfN9aKh6hrwb73e3TD/o+lDkKtWFPXzdqqWgKXv+/+t118JaGv5MIWJbol5WnPdofbz/ms4WsIPcTzY9eEzcHfmup08HveKisoIWPh+h9frr7v+7oTofZ4LXhFRWYQ3cbz7FiXRddU/fEAhAYtGo0/M3Tf/aFvm96V9HyMHuajNzMMqz/s/IroG7DP3a+4uHSOyL+v4/r2906Hi7tIxIv2yjs5bvyaiTNf5y4zoFDRvNHrYbL5IahaNVhSJfmayZ0NPT6eSelVA9mxoEEyqfF0pCxqF2FHugB0KlVbErF6/IebfNbQPTaHXgCfOtlVuVS5rGKGSgPMgmNZct8tEtxr6ZUJ9U/5xU6bPRO0yTEvSU5DFYrFYqov6grLw/Q7H8SUDXQI6AMDAhIAbcpzrQzfnDh2fagIWnveB36qMiQJiHjaj6LNmHK9RhPjUEjCv17+Aeb8vdSAat8LwD61YkihKfCqF2MzzBnv/cwDA3Jt5Xm4bNUWKT3wE7Hsk5WUkFJDjvNeec4sWn/ymfBxn+y4ZZj+zbRo3BYtPPgFA9xC2efjQiE/jXRGZryOZ2ObhQyM+jUXYZF3Jo9FVqPg0pqDMi5SJbR4+NOLTmIJuDmGbhw+N+OQT4DjjTC9t2p4XHUnH88JNweITT0AzCCbMPExr93hedCodz3OKFp9mK2L/dwYRXbfCMNfvoixKfGqX9Fph2GPg45vDneiegY95f/hAceLLqx3de6XdOy5IO7qw8VksFovFYrFYLJby8T+zWvz6IEl/pgAAAABJRU5ErkJggg==" id="img_8" />
+                          </defs>
+                          <g>
+                            <use xlink:href="#img_8" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                          </g>
+                        </svg>
+                    </span>
+                </div>
+
+                
+            </nav>
+            <nav class="mn-nv hide-small show-big">
+                <a href="#" class="men-ctg mn-nv-ln upper">Men</a>
+                <a href="#" class="wmn-ctg mn-nv-ln upper">Women</a>
+                <a href="#" class="grls-ctg mn-nv-ln upper">Girls</a>
+                <a href="#" class="ncltn-ctg mn-nv-ln upper">New Collection</a>
+                <a href="#" class="skt-ctg mn-nv-ln upper">Skate</a>
+                <a href="#" class="ltst-ctg mn-nv-ln upper">Latest</a>
+                <a href="#" class="sg-ctg mn-nv-ln upper">Suggested</a>
+            </nav>
+
+            
+            <div class="in-sec">
+                <h1 class="hero-title upper">VANS IS OLD SKOOL</h1>
+                <p class="in-sec-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab tenetur nemo voluptates dicta sed? Eius officia quasi provident hic aspernatur.</p>
+                <button class="in-sec-btn red">Buy Here &RightArrow;</button>
+            </div>
+        </header>
+
+        <main class="vn-wrapper">
+            <div class="ft-prd">
+                <h2 class="ft-prd-title upper">Featured Products</h2>
+                <div class="tb-btns">
+                    <p class="tb-btn" onclick="openVan(event, 'new')" id="open">New</p>
+                    <p class="tb-btn" onclick="openVan(event, 'suggested')">Recommended</p>
+                    <p class="tb-btn" onclick="openVan(event, 'common')">Common</p>
+
+                </div>
+
+                <div class="tc-wr">
+                    <!--Tab one for new shoes-->
+                    <div class="tcontent" id="new">
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    12
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog5.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">VAN One</span>
+                                <span class="sh-ds">Van is Old Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                        </a>
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    155
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog5.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">VAN One</span>
+                                <span class="sh-ds">Van is Old Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                            
+                            </a>
+
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    144
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog5.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">VAN One</span>
+                                <span class="sh-ds">Van is Old Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                        </a>
+
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    122
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog5.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">VAN One</span>
+                                <span class="sh-ds">Van is Old Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                        </a>
+
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    1443
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog5.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">VAN One</span>
+                                <span class="sh-ds">Van is Old Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                            
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                        </a>
+
+
+                        <!--This container spans 3 columns-->
+
+                        <div href="#" class="sh-bx-3">
+                                <div class="sh-bx-3-info">
+                                    <p class="sh-bx-3-title upper bold">This <br>season's <br>must-haves</p>
+                                    <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                    <button class="sh-bx-btn upper">
+                                        Add to Cart &Rightarrow;
+                                    </button>
+                                </div>
+
+                                <div class="sh-bx-crsl">
+                                    <div class="crsl-wrap">
+                                        <div class="crsl-bx">
+                                            <img src="./../../power.jpg" width="50" alt="Item One" class="crsl-img">
+                                            <span class="crsl-item-name upper">Shirt TX VRAx</span>
+                                            <span class="crsl-item-ds upper">Item is a shirt xx</span>
+                                            <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                            <span class="crsl-item-price">&dollar;78.99</span>
+                                        </div>
+
+                                        <div class="crsl-bx">
+                                            <img src="./../../abst1_slash.jpg" width="50" alt="Item One" class="crsl-img">
+                                            <span class="crsl-item-name upper">Shoe VX rRAx</span>
+                                            <span class="crsl-item-ds upper">Item is a shirt xx</span>
+                                            <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                            
+                                            <span class="crsl-item-price">&dollar;528.99</span>
+                                        </div>
+
+                                        <div class="crsl-bx">
+                                            <img src="./../../abst4.jpg" width="50" alt="Item One" class="crsl-img">
+                                            <span class="crsl-item-name upper">T-Shirt GX tRAx</span>
+                                            <span class="crsl-item-ds upper">Item is a shirt xx</span>
+                                            <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                            
+                                            <span class="crsl-item-price">&dollar;178.99</span>
+                                        </div>
+
+                                        <div class="crsl-bx">
+                                            <img src="./../../ano_girl.jpg" width="50" alt="Item One" class="crsl-img">
+                                            <span class="crsl-item-name upper">Short CX eRAx</span>
+                                            <span class="crsl-item-ds upper">Item is a shirt xx</span>
+                                            <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                            
+                                            <span class="crsl-item-price">&dollar;88.99</span>
+                                        </div>
+
+
+                                        <!--Next and previous buttons-->
+                                    <p onclick="addSlide(-1)" class="prev tprev">&#10094;</p>
+                                    <p onclick="addSlide(1)" class="next tnext">&#10095;</p>
+          
+                                    </div>
+                                </div>
+                        </div>
+
+                        <!--container spans 2 columns-->
+                        <div class="sh-bx-2">
+                            <div class="sh-bx-3-info">
+                                <p class="sh-bx-3-title upper bold">New <br>Arrivals <br>Pro Skate</p>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                <button class="sh-bx-btn">
+                                    Add to Cart &Rightarrow;
+                                </button>
+                            </div>
+
+                            <div class="sh-img-bx">
+                                <img src="./../../blog7.jpg" width="50" alt="Item Image" class="sh-2-img">
+                            </div>
+                        </div>
+
+                        <!--spans 1 column-->
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-hvr lft">
+                                    Recommended
+                                </span>
+                                <div class="sh-hvr-bx-rgt">
+                                    <span class="sh-fav">
+                                        <?xml version="1.0" encoding="utf-8"?>
+                                        <svg id="likeIcon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                          <defs>
+                                            <image width="96" height="96" xlink:href="data:image/png;base64,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" id="img_9" />
+                                          </defs>
+                                          <use xlink:href="#img_9" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                                        </svg>
+                                    </span>
+                                    <span class="sh-fav-num">
+                                        12
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog5.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                            <span class="sh-name">VAN One</span>
+                            <span class="sh-ds">Van is Old Skool</span>
+                            <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                            
+                            <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                            <div class="sh-hv-left-bn onhvr">
+                                <span class="sh-item-num">27</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-hvr lft">
+                                    Recommended
+                                </span>
+                                <div class="sh-hvr-bx-rgt">
+                                    <span class="sh-fav">
+                                        <?xml version="1.0" encoding="utf-8"?>
+                                        <svg id="likeIcon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                          <defs>
+                                            <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABHNCSVQICAgIfAhkiAAADVhJREFUeJztXG2MFdUZfs69dz9YYREsurvQpkYstbaiFasixWXFNUQtygarJUjTBprGtE1bEz/apsak0aQ26VdKWrXSpiQ2a4kgSLBrC6IiIAiNishXo1I+FnVXd1lld+bpj3tn5pwz58yde+/c3aWd5wecmTPznvd93ud95+PevUCKFClSpEiRIkWKFClSpEiRIkWKFClS/D9AVMNof8ftl9BxZ5O8WgjOgotJAP15kt0Q2AyBTcLJbRq79i+7q+FHMbw/t+OSjHBm0+HVAGcBmETfTQJEN4TYDIhNgLNpwj/XJu5nYgkYWLj4XGfQXQpyCYAWf4LUhoVtOVCBt+HisWxd7uGGVSvfSconE3raF54LDi6lyyWCnp+M9s/fJd4m3MfGiLqHGzauSsTPihMwcPPiWQ7dn4BsVybkYABQSgRsgQIgxepMFr8b+9Rfn6nUNxk9c2/qALDM91PygQayw9uUtQSQq0Uu89NKq6LsBHDhsvH9g/3LQd4WnoxSvTkRBhJeE8Ad49Z3birXRwDonbvgesL9JcipwZr5AbXkm1Sf901hPpgjIAQeObPpjO+Kzs6BcvwrKwF9HbdfhKGh1QA+rUyUofriJIgV40Tt98T6lR+U4uOH7Tef7bhYDroLTD6YVR+uAE314TEBCuzJInPDmc+vO1iKj0AZCejvWDzDdZwuQYxXJpJRPUwkuMQ7mZz4auO6J16M4+MH7R03uq67AnQnBmvmB2Wp3iIk+RgCR2uyudnjn1u7L46PHkpKQN/8RV+g4GaFfEUiSaneZIsQAnc2blj1iygfe6656SGAPzT5kKjqDQIjcCQjaq6Y+MLat6J8lBE7AQMLF3/KOeVsA3COybmkVW8lAVzZWD/h22LNHz+Uz+i/bkHz4BBXAu6cyDUV1+Kq3tBWLfESeCNb13DlhI1P9iAGMnEO4rJlDc4p52l45JO+U/khjc6AnvOUTikca0kEKZEvrRNsY9EHAz3bTrbf+klvd8+1HTMGh5xdgDsHviuWhHtzDK+rrKOP/ThlG0F8/jz5WWeg//EIOhXEqoC+mxY9CvIbunNW1WuKS6z05TUF9teg/uoh99RkF86zAhhXvNLCPsRbM0L1vjnqcd/zia1dD6IIiibg5IJFV7kOn7cSb3MMCZCgbevXFwK7BTgFxFnS4vESTmouWVRvIFyOlZY1CA5k6rPTznrumbcRgaItyHHwQJiEcIsxl76p3UhOsogCQ20uMAMQApyeJz+/jtLmaCbGazfBZrCOuiYDcuUY/XajkU95ngAxxh1wfhzFLVCkAvo6brsIg9gdcDMMqtfWif8EbZlTcqosGqqIsJ1wfFGq95NTOJfAx3U1NS3jt2x4DxZEV8CQuDNwvBqql9TnG4hWvTrWVQ/YiAldZBXlBqoP7GhrhVQvx5UfB/P5cwVZd2rw1DeN3BZgTQAXLhtPl4uVC1DVSJAClolQ5qqVcC3ZoSR4qtYJV+OgNFbWcbkUEbAmoO/jvnkmsmUSom8tK1Q91blRq3rPhnIdkWPD+d0z5kwzkozIFuS2FSNBCdqSiLJVr1SAZ6vChEtr5o9JSPX+PnXsJ8dla4jeAnK2Cbi4VCUkIEHZaVQfEOeCFwwNxGvb5ou7ZhdRF3dKp1gSLROv7ZPXU4jXbPtnK7bdi2GBPQHg53QnEyPB3zSTXXHCLXaLvkawEC7bDN16amuaBEWI0loQSQGi3ivH6NJXzgt8kktSc7aUXq+s4xOk+hD9GqGg2ijy/Xka1siPWYgvRH7Bf38+6IOSPXcKLIiqAC2eylWvqMMf2pSoz4V9iLfmyKheHtNFEywwVoAQgi7RX1z1MV6eKUOD6mVlK6cUU73ksK3XG+5qwlWRkOpDMVHyk9YH3ogKwFGA542I6rV1ElW9b84kKkqHl6H6kJ/evDgKC6y3oQI8VrnqfQnHUL2p0iRCmJDqDUrXk2NWvVYVJtUr3EhxCveIgWIAkRUgDgOuKl7tLua0Vn2goCLzwdiuem1ei4sUh2FBxIMYt+uqVxwK3cV4U9VSvbnS1DsqszKNqvdP9nZXonoD+aq9rQaCAURUQDaTedZxHU31mlKjLrLQt0da9QZl6usmqHoljiy6YIG1AhpmXLCLZPAaVcmo6qz5NYKqekUlI6J6NQ5V9XpVVKr6gg0CEOhu+teLr9p4tl+E77vPhcAGMwkmItQ5OREh1VsSMUpenhXCsCeYFtve8cFuAi7W2jgGinwekCEfLk313nHwHbWrXjrFpnppzWF9eWZJcFj16nr+J22KbfGHKI6Lfibc296xD3Sn+vToZAesKtvmXk/lcLU6lJOU4If/5Vl4vcheT0q7Zb/xSvOeLV9EBIp/LUXgV4HtKNUH5RmpeskWpQBMyrR+Liuvpbe1kOrNtpV2krjqPXv8dTF6iyagsTGzgsSJ4r3eoPqQw4HTPmyqN/R3RfXaRdHe68O2i15kI3t9YI8h20oSDje/8dIKO7N5FE2A6OzsExD3K2RIgcRXfcQTdBzVe8QmqnpDTH489gTbVR/wQoii34gAYn4zrnFC9ncAD4WUKK1bXPWSwZJUHxBBJcHVVr3mR8FeEdWjIJ/Xm/Zs+VMMauMlQHR2OhCZuwLi9d5YTdV75k2kBGuXpXrJXqWqD+aBDPB9IYQsOTu3cQ7y0NM2vwvgNUG7Cf5TiZfUHOwIjcN2pOD9TXtyg8NNFUXJrLaGNA5VsD72iNVbHbR5zx7wZMvebTcjJmJVgIda1C5xKfpU9YSdt783UlVvbAUm1fvnevPytcCmes+sSfVSVRhamVn1UGyrqi/YA947I5eN/B6QjpIS0PCPzsOAe5dKfODc/8bLsyDB4bWDsdoy84dmMuKO8a9tsX4LzoSy/kTp/dYbNwK8WlW9dICpJUAm3v9HVT2CsaklULNXTlsLEW9sN5Z1PHFo+/J7xZMtb8ZvPR5KqgAPudrcLaA4nvdjNL9GKFH1oRiKq75g72D9uMavl8Nl2X8l2dt64xWO6z4HoMZ31sOIqj68XmWqN79mCAyIvpxwZ0za+/JelIGyKgAAxm986iUhxLdUlUAiJVr1ykU0UdUjQvXqetZbS518s+oLi7u3lEs+UEECAGDCprWPAWK556yvWkNCFNVr7cHUCkKvjCV7QR6jExy2Df94SmP/f5l4OTnWlinua37z5fWVcFhRAgBgQlPDd0A+n/f1dH55BiXBEaoHQQhiTfP+7fdXyl/FCRCdnU72jLHzCeb/FEdztnTVFwwbVW9WY2KqtyY4EEd+U7zeNKnm1kq5AxL8sY73Zl7/eRfONgGOUdoNgjH0sXe9MOxT5n1JIkysTHzkvNm2Xxmhc83zBN+vZ2b6WQe2R/7tV1xUXAEeJr647tUcxA0kP1L7ZJVUD131iFC91m6KqV4iP5gHAPYCmJsU+UAVfi+oZ+a8tkE66wRZH1a9pSpGQPW2Byp5rFVFLwXaJu/fsTMeE/FQlR9sOjGzvY0ujUnIx2MixU9LNCmmVqar3rBPXk8hVh77myHbVSEfqFICAODElddeA4ddyahem7ckIRHVh2335jKZ1rP3bd8VP/r4qFoCAKD7irmtcPg0gDGJqz5gO1aC46tesiHwrkBudvP+ra+XGHpsVDUBAPDuZW0zXWIDgLGJq95vNwgRbp2Pn+DjOdTMOvvg1pJ+fqZUVD0BAHBiRtuXCPwdZGNSqo9sN4VxtOpNt57++K1sRrSds3/HgfIijo9hSQAAdM+YMw1kF4kpKinhJFRb9dZP2UgQYlcm09DevH9zd9nBloBhSwAAHL+stYlD6BLghfFUX8JFtjCuQPUA0IUJYn7Ljh0nK4s0PoY1AQDQfdVXxrG/dw3A1opUbyJemQ9sF1M9AEDwzy0HXllSYXglI7En4biY9MKaDydlp7WDWOWpmppK5Sfm8l6eMbBH6QWhZlt6FfLgSJAPjEAFeCApjk+f/XuASytSvand+KaKqB6ki8wdUw7uWJ5QWCVjxBLg4fj02XfTdR6I3es9YgtjpXKkfUV6PVzioywyi5sPvfxEwiGVhBFPAAAcm/7l6+DycbjumV5TCKsVMS6yNtWH5g+JnLi+Zd/OPdWKKS6G/Rpgwjm7N2+ozdVeTIjdQY+Gqnr5WiD1d/UOx9brPXMEgfW1tQ3TRwP5wCipAA+cN6/u2Fu9v4HrBr+xU+prBNs8xBAE7p18YOfPqx1HKRhVCfBw9MIrv0aHjwAcA8B6a6lcLyy9niQocFiI3C2TD2yP9cu7w4lRmQAA6L7oqmlDp4b+BvJCANGqNxFfGFNgPWprFk95Y9u7wxpATIzaBAAAW1vrjxw5+VtB5r9vGevW0lf9oCDvnXxo10PD6nSJGNUJ8HD0M5ffSjqPEmiIVL3/VIt3MuCC5oO7tg+/t6XhtEgAABy/4PLzh4ac1SAvMDxQBW8UwHX1Irto4sEdvSPhZ6k4bRIAAJw6r+4/6L4HdO8WRB0gqR7oFxQ/aPn3zsg/Cx1tOK0S4OHY1EvPG3L5I4A3kBgUwPpsbc3PmvZuOzTSvqVIkSJFihQpUqRIkSJFihQpUqRIYcN/AepwAfGu0y1NAAAAAElFTkSuQmCC" id="img_10" />
+                                          </defs>
+                                          <use xlink:href="#img_10" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                                        </svg>
+                                    </span>
+                                    <span class="sh-fav-num">
+                                        17
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../abst4.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                            <span class="sh-name">Lorem Item XCBS</span>
+                            <span class="sh-ds">Lorem ipsum dolor sit amet consectetur.</span>
+                            <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                            
+                            <span class="sh-price red">&dollar;909.99</span>
+                            
+                            </div>
+                            <div class="sh-hv-left-bn onhvr">
+                                <span class="sh-item-num">28</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-hvr lft">
+                                    Recommended
+                                </span>
+                                <div class="sh-hvr-bx-rgt">
+                                    <span class="sh-fav">
+                                        <?xml version="1.0" encoding="utf-8"?>
+                                        <svg id="likeIcon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                          <defs>
+                                            <image width="96" height="96" xlink:href="data:image/png;base64,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" id="img_11" />
+                                          </defs>
+                                          <use xlink:href="#img_11" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                                        </svg>
+                                    </span>
+                                    <span class="sh-fav-num">
+                                        28
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../ano_girl.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                            <span class="sh-name">Idonsa 3dsCBS</span>
+                            <span class="sh-ds">Lorem ipsum dolor sit amet consectetur.</span>
+                            <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                            
+                            <span class="sh-price red">&dollar;109.99</span>
+                            
+                            </div>
+                            <div class="sh-hv-left-bn onhvr">
+                                <span class="sh-item-num">58</span>
+                            </div>
+                        </a>
+
+                        <!--container spans 2 columns-->
+                        <div class="sh-bx-2">
+                            <div class="sh-bx-3-info">
+                                <p class="sh-bx-3-title upper bold">Uniform Friendly Shoes</p>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                <button class="sh-bx-btn upper">
+                                    Add to Cart &Rightarrow;
+                                </button>
+                            </div>
+
+                            <div class="sh-img-bx">
+                                <img src="./../../blog13.jpg" width="50" alt="Item Image" class="sh-2-img">
+                            </div>
+                        </div>
+                        
+
+
+                    </div>
+
+                    <!--Tab two for suggested items-->
+
+                    <div class="tcontent" id="suggested">
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    121
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog11.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">Shoe One</span>
+                                <span class="sh-ds">Shoe is Old Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                            </a>
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    124
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog6.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">Lorem</span>
+                                <span class="sh-ds">Lorem, ipsum dolor. is Old Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                <span class="sh-price red">&dollar;199.99</span>
+                            
+                            </div>
+                            
+                            </a>
+
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    105
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog2.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">VAN Old skool</span>
+                                <span class="sh-ds">Van is newer and better</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                
+                                <span class="sh-price red">&dollar;399.99</span>
+                            
+                            </div>
+                            </a>
+
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    120
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog5.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">VAN One</span>
+                                <span class="sh-ds">Van is Old Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                            </a>
+
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    1411
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog6.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">VAN One</span>
+                                <span class="sh-ds">Van is Old Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                            
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                            </a>
+
+
+                        <!--This container spans 3 columns-->
+
+                        <div href="#" class="sh-bx-3">
+                                <div class="sh-bx-3-info">
+                                    <p class="sh-bx-3-title upper bold">This <br>season's <br>must-haves</p>
+                                    <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                    <button class="sh-bx-btn upper">
+                                        Add to Cart &Rightarrow;
+                                    </button>
+                                </div>
+
+                                <div class="sh-bx-crsl">
+                                    <div class="crsl-wrap">
+                                        <div class="scrsl-bx">
+                                            <img src="./../../abst1_slash.jpg" width="50" alt="Item One" class="crsl-img">
+                                            <span class="crsl-item-name upper">Shirt TX VRAx</span>
+                                            <span class="crsl-item-ds upper">Item is a shirt xx</span>
+                                            <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                            <span class="crsl-item-price">&dollar;78.99</span>
+                                        </div>
+
+                                        <div class="scrsl-bx">
+                                            <img src="./../../abst1_slash.jpg" width="50" alt="Item One" class="crsl-img">
+                                            <span class="crsl-item-name upper">Shoe VX rRAx</span>
+                                            <span class="crsl-item-ds upper">Item is a shirt xx</span>
+                                            <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                            
+                                            <span class="crsl-item-price">&dollar;528.99</span>
+                                        </div>
+
+                                        <div class="scrsl-bx">
+                                            <img src="./../../abst4.jpg" width="50" alt="Item One" class="crsl-img">
+                                            <span class="crsl-item-name upper">T-Shirt GX tRAx</span>
+                                            <span class="crsl-item-ds upper">Item is a shirt xx</span>
+                                            <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                            
+                                            <span class="crsl-item-price">&dollar;178.99</span>
+                                        </div>
+
+                                        <div class="scrsl-bx">
+                                            <img src="./../../ano_girl.jpg" width="50" alt="Item One" class="crsl-img">
+                                            <span class="crsl-item-name upper">Short CX eRAx</span>
+                                            <span class="crsl-item-ds upper">Item is a shirt xx</span>
+                                            <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                            
+                                            <span class="crsl-item-price">&dollar;88.99</span>
+                                        </div>
+
+
+                                        <!--Next and previous buttons-->
+                                    <p onclick="addSlides(-1)" class="prev tprev">&#10094;</p>
+                                    <p onclick="addSlides(1)" class="next tnext">&#10095;</p>
+          
+                                    </div>
+                                </div>
+                        </div>
+
+                        <!--container spans 2 columns-->
+                        <div class="sh-bx-2">
+                            <div class="sh-bx-3-info">
+                                <p class="sh-bx-3-title upper bold">New <br>Arrivals <br>Pro Skate</p>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                <button class="sh-bx-btn">
+                                    Add to Cart &Rightarrow;
+                                </button>
+                            </div>
+
+                            <div class="sh-img-bx">
+                                <img src="./../../blog7.jpg" width="50" alt="Item Image" class="sh-2-img">
+                            </div>
+                        </div>
+
+                        <!--spans 1 column-->
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-hvr lft">
+                                    Recommended
+                                </span>
+                                <div class="sh-hvr-bx-rgt">
+                                    <span class="sh-fav">
+                                        <?xml version="1.0" encoding="utf-8"?>
+                                        <svg id="likeIcon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                          <defs>
+                                            <image width="96" height="96" xlink:href="data:image/png;base64,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" id="img_1" />
+                                          </defs>
+                                          <use xlink:href="#img_1" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                                        </svg>
+                                    </span>
+                                    <span class="sh-fav-num">
+                                        12
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog5.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                            <span class="sh-name">VAN One</span>
+                            <span class="sh-ds">Van is Old Skool</span>
+                            <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                            
+                            <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                            <div class="sh-hv-left-bn onhvr">
+                                <span class="sh-item-num">27</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-hvr lft">
+                                    Recommended
+                                </span>
+                                <div class="sh-hvr-bx-rgt">
+                                    <span class="sh-fav">
+                                        <?xml version="1.0" encoding="utf-8"?>
+                                        <svg id="likeIcon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                          <defs>
+                                            <image width="96" height="96" xlink:href="data:image/png;base64,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" id="img_1" />
+                                          </defs>
+                                          <use xlink:href="#img_1" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                                        </svg>
+                                    </span>
+                                    <span class="sh-fav-num">
+                                        17
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../abst4.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                            <span class="sh-name">Lorem Item XCBS</span>
+                            <span class="sh-ds">Lorem ipsum dolor sit amet consectetur.</span>
+                            <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                            
+                            <span class="sh-price red">&dollar;909.99</span>
+                            
+                            </div>
+                            <div class="sh-hv-left-bn onhvr">
+                                <span class="sh-item-num">28</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-hvr lft">
+                                    Recommended
+                                </span>
+                                <div class="sh-hvr-bx-rgt">
+                                    <span class="sh-fav">
+                                        <?xml version="1.0" encoding="utf-8"?>
+                                        <svg id="likeIcon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                          <defs>
+                                            <image width="96" height="96" xlink:href="data:image/png;base64,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" id="img_1" />
+                                          </defs>
+                                          <use xlink:href="#img_1" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                                        </svg>
+                                    </span>
+                                    <span class="sh-fav-num">
+                                        28
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../ano_girl.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                            <span class="sh-name">Idonsa 3dsCBS</span>
+                            <span class="sh-ds">Lorem ipsum dolor sit amet consectetur.</span>
+                            <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                            
+                            <span class="sh-price red">&dollar;109.99</span>
+                            
+                            </div>
+                            <div class="sh-hv-left-bn onhvr">
+                                <span class="sh-item-num">58</span>
+                            </div>
+                        </a>
+
+                        <!--container spans 2 columns-->
+                        <div class="sh-bx-2">
+                            <div class="sh-bx-3-info">
+                                <p class="sh-bx-3-title upper bold">Uniform Friendly Shoes</p>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                <button class="sh-bx-btn upper">
+                                    Add to Cart &Rightarrow;
+                                </button>
+                            </div>
+
+                            <div class="sh-img-bx">
+                                <img src="./../../blog13.jpg" width="50" alt="Item Image" class="sh-2-img">
+                            </div>
+                        </div>
+                        
+
+
+                    </div>
+
+                    <!--Tab three for common items catgry-->
+
+                    <div class="tcontent" id="common">
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    1266
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog9.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">Nike One</span>
+                                <span class="sh-ds">Nike Old Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                            </a>
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    12150
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../ano_girl.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">DK Shoes</span>
+                                <span class="sh-ds">Dking Ultra Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                            
+                            </a>
+
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    1440
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog11.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">Nike Air</span>
+                                <span class="sh-ds">Nike Air Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                            </a>
+
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    121
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../abst2_slash.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">Entry Superior</span>
+                                <span class="sh-ds">Lorem ipsum dolor sit.</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                            </a>
+
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-view">
+                                    Likes:
+                                </span>
+                                <span class="sh-cart">
+                                    1443
+                                </span>
+                            </div>
+
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog5.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                                <span class="sh-name">VAN One</span>
+                                <span class="sh-ds">Van is Old Skool</span>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                            
+                                <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                            </a>
+
+
+                        <!--This container spans 3 columns-->
+
+                        <div href="#" class="sh-bx-3">
+                                <div class="sh-bx-3-info">
+                                    <p class="sh-bx-3-title upper bold">This <br>season's <br>must-haves</p>
+                                    <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                                    <button class="sh-bx-btn upper">
+                                        Add to Cart &Rightarrow;
+                                    </button>
+                                </div>
+
+                                <div class="sh-bx-crsl">
+                                    <div class="crsl-wrap">
+                                        <div class="rcrsl-bx">
+                                            <img src="./../../blog10.jpg" width="50" alt="Item One" class="crsl-img">
+                                            <span class="crsl-item-name upper">Shirt TX VRAx</span>
+                                            <span class="crsl-item-ds upper">Item is a shirt xx</span>
+                                            <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                            <span class="crsl-item-price">&dollar;78.99</span>
+                                        </div>
+
+                                        <div class="rcrsl-bx">
+                                            <img src="./../../abst1_slash.jpg" width="50" alt="Item One" class="crsl-img">
+                                            <span class="crsl-item-name upper">Shoe VX rRAx</span>
+                                            <span class="crsl-item-ds upper">Item is a shirt xx</span>
+                                            <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                            
+                                            <span class="crsl-item-price">&dollar;528.99</span>
+                                        </div>
+
+                                        <div class="rcrsl-bx">
+                                            <img src="./../../blog2.jpg" width="50" alt="Item One" class="crsl-img">
+                                            <span class="crsl-item-name upper">T-Shirt GX tRAx</span>
+                                            <span class="crsl-item-ds upper">Item is a shirt xx</span>
+                                            <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                            
+                                            <span class="crsl-item-price">&dollar;178.99</span>
+                                        </div>
+
+                                        <div class="rcrsl-bx">
+                                            <img src="./../../ano_girl.jpg" width="50" alt="Item One" class="crsl-img">
+                                            <span class="crsl-item-name upper">Short CX eRAx</span>
+                                            <span class="crsl-item-ds upper">Item is a shirt xx</span>
+                                            <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                            
+                                            <span class="crsl-item-price">&dollar;88.99</span>
+                                        </div>
+
+
+                                        <!--Next and previous buttons-->
+                                    <p onclick="addSlider(-1)" class="prev tprev">&#10094;</p>
+                                    <p onclick="addSlider(1)" class="next tnext">&#10095;</p>
+          
+                                    </div>
+                                </div>
+                        </div>
+
+                        <!--container spans 2 columns-->
+                        <div class="sh-bx-2">
+                            <div class="sh-bx-3-info">
+                                <p class="sh-bx-3-title upper bold">New <br>Arrivals <br>Pro Skate</p>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                <button class="sh-bx-btn">
+                                    Add to Cart &Rightarrow;
+                                </button>
+                            </div>
+
+                            <div class="sh-img-bx">
+                                <img src="./../../blog7.jpg" width="50" alt="Item Image" class="sh-2-img">
+                            </div>
+                        </div>
+
+                        <!--spans 1 column-->
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-hvr lft">
+                                    Recommended
+                                </span>
+                                <div class="sh-hvr-bx-rgt">
+                                    <span class="sh-fav">
+                                        <?xml version="1.0" encoding="utf-8"?>
+                                        <svg id="likeIcon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                          <defs>
+                                            <image width="96" height="96" xlink:href="data:image/png;base64,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" id="img_1" />
+                                          </defs>
+                                          <use xlink:href="#img_1" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                                        </svg>
+                                    </span>
+                                    <span class="sh-fav-num">
+                                        12
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../blog5.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                            <span class="sh-name">VAN One</span>
+                            <span class="sh-ds">Van is Old Skool</span>
+                            <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                            
+                            <span class="sh-price red">&dollar;99.99</span>
+                            
+                            </div>
+                            <div class="sh-hv-left-bn onhvr">
+                                <span class="sh-item-num">27</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-hvr lft">
+                                    Recommended
+                                </span>
+                                <div class="sh-hvr-bx-rgt">
+                                    <span class="sh-fav">
+                                        <?xml version="1.0" encoding="utf-8"?>
+                                        <svg id="likeIcon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                          <defs>
+                                            <image width="96" height="96" xlink:href="data:image/png;base64,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" id="img_1" />
+                                          </defs>
+                                          <use xlink:href="#img_1" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                                        </svg>
+                                    </span>
+                                    <span class="sh-fav-num">
+                                        17
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../abst4.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                            <span class="sh-name">Lorem Item XCBS</span>
+                            <span class="sh-ds">Lorem ipsum dolor sit amet consectetur.</span>
+                            <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                            
+                            <span class="sh-price red">&dollar;909.99</span>
+                            
+                            </div>
+                            <div class="sh-hv-left-bn onhvr">
+                                <span class="sh-item-num">28</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="sh-bx">
+                            <div class="sh-onhover">
+                                <span class="sh-hvr lft">
+                                    Recommended
+                                </span>
+                                <div class="sh-hvr-bx-rgt">
+                                    <span class="sh-fav">
+                                        <?xml version="1.0" encoding="utf-8"?>
+                                        <svg id="likeIcon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                          <defs>
+                                            <image width="96" height="96" xlink:href="data:image/png;base64,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" id="img_1" />
+                                          </defs>
+                                          <use xlink:href="#img_1" fill="#FFFFFF" stroke="none" transform="scale(0.15625 0.15625)" />
+                                        </svg>
+                                    </span>
+                                    <span class="sh-fav-num">
+                                        28
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sh-bx-item-wrap">
+                                <img src="./../../ano_girl.jpg" width="50" alt="Shoe Image" class="sh-bx-img">
+
+                            <span class="sh-name">Idonsa 3dsCBS</span>
+                            <span class="sh-ds">Lorem ipsum dolor sit amet consectetur.</span>
+                            <span class="h-line">&HorizontalLine;&HorizontalLine;&HorizontalLine;</span>
+                            
+                            <span class="sh-price red">&dollar;109.99</span>
+                            
+                            </div>
+                            <div class="sh-hv-left-bn onhvr">
+                                <span class="sh-item-num">58</span>
+                            </div>
+                        </a>
+
+                        <!--container spans 2 columns-->
+                        <div class="sh-bx-2">
+                            <div class="sh-bx-3-info">
+                                <p class="sh-bx-3-title upper bold">Uniform Friendly Shoes</p>
+                                <span class="h-line">&HorizontalLine;&HorizontalLine;</span>
+                                <button class="sh-bx-btn upper">
+                                    Add to Cart &Rightarrow;
+                                </button>
+                            </div>
+
+                            <div class="sh-img-bx">
+                                <img src="./../../blog13.jpg" width="50" alt="Item Image" class="sh-2-img">
+                            </div>
+                        </div>
+                        
+
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+    </body>
+    <footer class="vn-foo">
+        <div class="vn-foo-in">
+            <div class="imp-lnks foo-lnks">
+                <h4 class="imp-ln-title white upper foo-title">Important Links</h4>
+                <a href="#" class="imp-ln f-ln foo-ln upper">Partners</a>
+                <a href="#" class="imp-ln f-ln foo-ln upper">FAQ</a>
+                <a href="#" class="imp-ln f-ln foo-ln upper">Privacy</a>
+                <a href="#" class="imp-ln f-ln foo-ln upper">Shops</a>
+                <a href="#" class="imp-ln f-ln foo-ln upper">Customer reviews</a>
+    
+            </div>
+    
+            <div class="web-lnks foo-lnks">
+                <h4 class="web-ln-title white upper foo-title">Web Links</h4>
+                <a href="#" class="web-ln f-ln foo-ln upper">Web</a>
+                <a href="#" class="web-ln f-ln foo-ln upper">Web Traffic</a>
+                <a href="#" class="web-ln f-ln foo-ln upper">Web SEO</a>
+    
+            </div>
+    
+            <div class="follow-lnks foo-lnks">
+                <h4 class="fol-lnks-title upper white foo-title">Follow Links</h4>
+                <div class="fol-lnks">
+                    <a href="#" class="fb fl-ln foo-ln">
+                                        <?xml version="1.0" encoding="utf-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <image width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABHNCSVQICAgIfAhkiAAABSZJREFUeJztndt1GzkMhn/s2fdVBzupIEoFO64gSgVROnAHqw4cVxC5AtsVWK4gcgWSKrBcwb8PpNeKYml4AYdz4XeOjvXAITGAAJLgxUChUCgUCoVCoVAYG5JbgHOQnAD4CGAKoLJ/Yb9XR8W39gMAa/t9DeBJRPYp5YyhcwYg+RlAbT/Ts4XdWQNYAViJyL1SncOBZE3yB8lnpufZtlXnfu/skPxKctOC0k+xIfk1tx5aheSE5L+ZFX/MhkamSW79JIXkjN1S/DEbkrPcelKHZEXyNq9uvbglWeXWmwo0v/o2Oldtntl3byB5lVuLClyl1FGSeQBNZ/YAvXF8btYALlJM6NQNMEDlv5LECKoGIDmFUf5Qh3N7GCOstSpUM4D95W8wXOW/sgfwQcsT/tCo5CDsDF35gHnHBypN2lQ8gORPDC/mN7EWkU+xlUR7AMnvGJ/yAWBq3z2KKA+gmajcxgrRc76IyF3ow8EGoJmq/8Q44v459gA+icg25OGYEHSFfir/Rbm+CYwuggjygJ6EnhcAd3hbCdueK2xHNVP7CVHohYisAp7zgyafv2k9I+POluQ84v3qwHY3DBiahoSgS/y+IN4VbgBMRWSZoe0KwDx5K+xuavlS6f1CPYAkN77teXkAjWt3seO9EZHoMbkCFT3Dn1cnbC1c+TzTAk8iojYRpNkt8RBRxVZEPrgWdvYAK1gVIFBqVEKPIhU9trz4hKC5tyjpeWxl6OfP3LWgjwE++8uRnGVuAU7grCsnA9BMvLrY+a5yC3CCCR0X9F09oA6XJRk73/wLzfaYHzwzkURcB3xI7VLoT8fK/gmXIxlbn8JsP33ipLNGD+BbjqRr+K7LJt1e8g5TOqQmXEJQF5UPmDSwEzSp8yqZJKdp1F2fDeBDlaldFQNU8XKMlqqpwFg8IBcqHlBIiIsB/k4uxXBp1F3pA9JSNRUoISgzxQCZaVyQsfmRtrlwKLN1zQV5zubnANROTorIWR27GGCLljviJqFTQvIOeqn3FxE5m45wCUFbHVl6g2bavTFfVfqA3/nYZmMuBlA7DdITOucBnb1pRBuaI1aaNOrOxQCreDl6g/ay66qpQAlBv6LtAfEhyB5Ge1IRp/toeoDTRVGuo6BVnCy9oVasyylyFAOkw+nYkvOMk+QewF/B4vixcihz47oN3Y5uXBbla5f6HGicAb/iui0FMBZt63ap2qHMo0d9E8c6tXA+tOczE176yzFalq4FnQ1gN8HuAoQZGzufDcO+uaCFZ/kxsvAp7GUA2+kVLzjNzvd8Wkg21KuBkbHwfcDbACKyQPGC9/D+9QPh6wHzwOeGzDzkoSAD2F7eZxw+dO5Dj0rFrIjNoH/vQh95QURECDaAzfQFNzwg5jHXl0WtCdt7cq5j6ug51zF3BQEKi/Iicolx9geP9t2j0NoVMcN4Fm0A864q1xqrGMDGwBrj6JSfANSdurYS+N8IUwzbE1SVDyhvzLJ7NWsM0wjqygcS7Iw7CEdD6pjvkUD5QKKtiSKyF5EawxiiXovILNW/wkq6N9QO076gn53zC8xFfEmvw0m+OddOVCoYN+4L9wCqNq7CaWV3tA1JM5iDF11OZe9gfvXJQs4xrW5PF5GViFQAvqFbhtgB+CYirfzqD8lyPkBElgeGyDlkfcKb4pcZ5cgLySnJJcm9xxWRC4/6D6+i3Nu2yg0A72GNsSC5VjTAlOT3Liq9c/9N9Ri+3dZY4dfdbSu7Pl0oFAqFQqFQKBQKveI/f77nqoE8NAsAAAAASUVORK5CYII=" id="img_01" />
+  </defs>
+  <use xlink:href="#img_01" fill="#FFFFFF" stroke="none" transform="scale(0.20833333 0.20833333)" />
+</svg>
+                    </a>
+                    <a href="#" class="fb fl-ln foo-ln">
+                                    <?xml version="1.0" encoding="utf-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L20 0L20 20L0 20L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Twitter-icon">
+    <path d="M0 0L20 0L20 20L0 20L0 0Z" id="Background" fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd" stroke="none" />
+    <g clip-path="url(#mask_1)">
+      <path d="M18.6667 4.62467C18.0287 4.908 17.3433 5.09867 16.624 5.18467C17.3587 4.74467 17.922 4.048 18.1873 3.21734C17.5007 3.62467 16.7393 3.92067 15.9287 4.08067C15.28 3.38934 14.356 2.95734 13.3333 2.95734C11.3693 2.95734 9.77734 4.55 9.77734 6.51334C9.77734 6.792 9.80934 7.064 9.86934 7.32334C6.91401 7.17534 4.29401 5.75934 2.53934 3.60734C2.23401 4.13267 2.05867 4.74334 2.05867 5.396C2.05867 6.62934 2.68601 7.718 3.64001 8.35534C3.05734 8.33667 2.50867 8.17667 2.02934 7.91067C2.02934 7.926 2.02934 7.94 2.02934 7.95534C2.02934 9.67867 3.25467 11.116 4.88201 11.442C4.58401 11.5233 4.26934 11.5667 3.94467 11.5667C3.71601 11.5667 3.49267 11.544 3.27601 11.5033C3.72867 12.916 5.04201 13.9447 6.59801 13.9733C5.38134 14.9273 3.84801 15.496 2.18134 15.496C1.89467 15.496 1.61134 15.4793 1.33267 15.446C2.90667 16.4547 4.77534 17.0433 6.78401 17.0433C13.3253 17.0433 16.9013 11.6247 16.9013 6.92534C16.9013 6.77134 16.898 6.618 16.8913 6.46534C17.5867 5.96334 18.19 5.33734 18.6667 4.62467L18.6667 4.62467Z" id="Shape" fill="#FFFFFF" stroke="none" />
+    </g>
+  </g>
+</svg>
+                    </a>
+                    <a href="#" class="fb fl-ln foo-ln">
+                                <?xml version="1.0" encoding="utf-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L20 0L20 20L0 20L0 0Z" id="path_2" />
+    <clipPath id="mask_2">
+      <use xlink:href="#path_2" />
+    </clipPath>
+  </defs>
+  <g id="Youtube-icon-3">
+    <path d="M0 0L20 0L20 20L0 20L0 0Z" id="Background" fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd" stroke="none" />
+    <g clip-path="url(#mask_2)">
+      <path d="M10 2.5C7.45117 2.5 5.19531 2.76367 3.82324 2.96875C2.70019 3.13477 1.80664 4.01367 1.60156 5.1416C1.42578 6.12793 1.25 7.56836 1.25 9.375C1.25 11.1816 1.42578 12.6221 1.60156 13.6084C1.80664 14.7363 2.70019 15.6104 3.82324 15.7813C5.20019 15.9863 7.46582 16.25 10 16.25C12.5342 16.25 14.7949 15.9863 16.1719 15.7813L16.1768 15.7813C17.2998 15.6152 18.1934 14.7363 18.3984 13.6084C18.5742 12.6172 18.75 11.1768 18.75 9.375C18.75 7.56836 18.5742 6.12793 18.3936 5.1416C18.1934 4.01367 17.2998 3.13477 16.1768 2.96875C14.8047 2.76367 12.5488 2.5 10 2.5L10 2.5ZM10 3.75C12.4609 3.75 14.6631 4.00391 15.9912 4.2041C16.5771 4.29199 17.0508 4.75098 17.1631 5.36133C17.3291 6.28418 17.5 7.65137 17.5 9.375C17.5 11.0986 17.3291 12.4658 17.168 13.3838C17.0557 13.999 16.582 14.458 15.9912 14.5459C14.6533 14.7412 12.4463 15 10 15C7.55371 15 5.3418 14.7412 4.00879 14.5459C3.42285 14.458 2.94434 13.999 2.83203 13.3838C2.6709 12.4609 2.5 11.0986 2.5 9.375C2.5 7.64649 2.6709 6.28418 2.83203 5.36133C2.94434 4.75098 3.41797 4.29199 4.00391 4.20899L4.00879 4.20899C5.33691 4.00879 7.53906 3.75 10 3.75L10 3.75ZM7.5 6.25L7.5 12.5L13.75 9.375L7.5 6.25Z" id="Shape" fill="#DE0B0B" fill-rule="evenodd" stroke="none" />
+    </g>
+  </g>
+</svg>
+                    </a>
+                    <a href="#" class="fb fl-ln foo-ln">
+                                <?xml version="1.0" encoding="utf-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L20 0L20 20L0 20L0 0Z" id="path_3" />
+    <clipPath id="mask_3">
+      <use xlink:href="#path_3" />
+    </clipPath>
+  </defs>
+  <g id="Instagram-icon-2">
+    <path d="M0 0L20 0L20 20L0 20L0 0Z" id="Background" fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd" stroke="none" />
+    <g clip-path="url(#mask_3)">
+      <path d="M5.9668 1.25C3.36914 1.25 1.25 3.36914 1.25 5.9668L1.25 12.7881C1.25 15.3809 3.36914 17.5 5.9668 17.5L12.7881 17.5C15.3809 17.5 17.5 15.3809 17.5 12.7832L17.5 5.9668C17.5 3.36914 15.3809 1.25 12.7832 1.25L5.9668 1.25ZM5.9668 2.5L12.7832 2.5C14.707 2.5 16.25 4.04297 16.25 5.9668L16.25 12.7832C16.25 14.707 14.707 16.25 12.7881 16.25L5.9668 16.25C4.04297 16.25 2.5 14.707 2.5 12.7881L2.5 5.9668C2.5 4.04297 4.04297 2.5 5.9668 2.5L5.9668 2.5ZM14.375 3.75C14.0283 3.75 13.75 4.02832 13.75 4.375C13.75 4.72168 14.0283 5 14.375 5C14.7217 5 15 4.72168 15 4.375C15 4.02832 14.7217 3.75 14.375 3.75L14.375 3.75ZM9.375 5C6.96777 5 5 6.96777 5 9.375C5 11.7822 6.96777 13.75 9.375 13.75C11.7822 13.75 13.75 11.7822 13.75 9.375C13.75 6.96777 11.7822 5 9.375 5L9.375 5ZM9.375 6.25C11.1084 6.25 12.5 7.6416 12.5 9.375C12.5 11.1084 11.1084 12.5 9.375 12.5C7.6416 12.5 6.25 11.1084 6.25 9.375C6.25 7.6416 7.6416 6.25 9.375 6.25L9.375 6.25Z" id="Shape" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    </g>
+  </g>
+</svg>
+                    </a>
+    
+                </div>
+            </div>
+    
+            <div class="foo-mess-frm foo-lnks">
+                <h4 class="f-msg-title upper">Leave us a message and we'll get back</h4>
+                <p class="foo-msg-ds">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <form action="#" method="GET" class="foo-msg-form">
+                    <input type="text" placeholder="I would like a shoe..."  name="message" id="msgBx">
+                    <button id="sendMsgBx">&rArr;</button>
+                </form>
+            </div>
+        </div>
+        <div class="cp">
+            <p class="coprgt">&copy;2022 VANS. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="carl.js"></script>
+</html>
